@@ -8,6 +8,11 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -16,36 +21,29 @@ public class Titulo {
         return anoDeLancamento;
     }
 
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
-    }
-
-    public int getDuracaoEmMinutos() {
-        return duracaoEmMinutos;
-    }
-
-    public int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-
-
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
 
     public void exibeFIchaTecnica() {
         System.out.println("nome do filme: " + nome);
