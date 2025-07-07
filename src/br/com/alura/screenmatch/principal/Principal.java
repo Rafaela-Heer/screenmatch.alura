@@ -1,8 +1,11 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -34,7 +37,7 @@ public class Principal {
         System.out.println("Duração para maratonar a sua série: " + serie.getDuracaoEmMinutos());
 
         Filme outroFilme = new Filme("Mamma Mia", 2008);
-        meuFilme.setDuracaoEmMinutos(108);
+        outroFilme.setDuracaoEmMinutos(108);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
@@ -54,14 +57,17 @@ public class Principal {
         var filmeDaRafa = new Filme("Crepúsculo", 2008);
         filmeDaRafa.setDuracaoEmMinutos(130);
         filmeDaRafa.avalia(10);
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(filmeDaRafa);
-        listaDeFilmes.add(meuFilme);
-        listaDeFilmes.add(outroFilme);
-        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
-        System.out.println("O primeiro filme é " + listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
-        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
+        ArrayList<Titulo> lista = new ArrayList<>();
+        lista.add(filmeDaRafa);
+        lista.add(meuFilme);
+        lista.add(outroFilme);
+        lista.add(serie);
+
+        System.out.println("Tamanho da lista: " + lista.size());
+        System.out.println("O primeiro filme é " + lista.get(0).getNome());
+        System.out.println(lista);
+        System.out.println("toString do filme " + lista.get(0).toString());
 
 
     }
